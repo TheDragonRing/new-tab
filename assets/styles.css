@@ -32,7 +32,7 @@ html:before {
 }
 
 body {
-  margin: 250px 0px 0px 0px;
+  margin: 150px 0px 0px 0px;
 }
 
 ::selection {
@@ -45,11 +45,55 @@ body {
   background: #a61419;
 }
 
-[fadeIn] {
+[fadeIn], .startHidden {
   visibility: hidden;
 }
 
+header {
+  top: 1%;
+  width: 100%;
+  padding: 15px;
+  position: fixed;
+}
+
+header #github {
+  left: 1%;
+  color: #fff;
+  text-align: left;
+  position: absolute;
+  text-decoration: none;
+  font: 15px sans-serif;
+  text-transform: uppercase;
+}
+
+footer {
+  bottom: 1%;
+  width: 100%;
+  padding: 15px;
+  position: fixed;
+}
+
+footer #copyright {
+  left: 1%;
+  color: #fff;
+  text-align: left;
+  position: absolute;
+  text-decoration: none;
+  font: 15px sans-serif;
+  text-transform: uppercase;
+}
+
+/* MAIN */
+
 h1 {
+  width: 75%;
+  color: white;
+  margin: auto;
+  text-align: center;
+  font: 150px sans-serif;
+}
+
+h2 {
   width: 75%;
   color: white;
   margin: auto;
@@ -63,7 +107,8 @@ div {
  width: 100%;
 }
 
-input {
+#searchBar {
+  z-index: 2;
   width: 50%;
   padding: 15px;
   display: block;
@@ -79,16 +124,53 @@ input:focus {
   border: 1px solid #000;
 }
 
-footer {
-  right: 0;
-  bottom: 0;
-  padding: 15px;
-  position: absolute;
-}
+/* NOTES */
 
-footer a {
+footer #openNotes {
+  right: 1%;
   color: #fff;
+  text-align: left;
+  position: absolute;
   text-decoration: none;
   font: 15px sans-serif;
   text-transform: uppercase;
+}
+
+#notesTab {
+  top: 0;
+  right: 0;
+  width: 45%;
+  z-index: 3;
+  height: 100%;
+  padding: 30px 50px;
+  overflow-x: hidden;
+  overflow-y: hidden;
+  position: absolute;
+  background-color: #fff;
+  border-left: 7.5px solid #cfcfcf;
+}
+
+#notesTab textarea {
+  width: 100%;
+  resize: none;
+  outline: none;
+  height: 92.5%;
+  padding: 15px;
+  border-radius: 5px;
+  font: 25px sans-serif;
+  border: 1px solid #000;
+}
+
+#notesTab #saveNotes {
+  color: #fff;
+  width: 100%;
+  padding: 7.5px;
+  margin: 15px 0px;
+  text-align: center;
+  border-radius: 5px;
+  display: inline-block;
+  font: 25px sans-serif;
+  text-decoration: none;
+  border: 1px solid #000;
+  background-color: #a61419;
 }
